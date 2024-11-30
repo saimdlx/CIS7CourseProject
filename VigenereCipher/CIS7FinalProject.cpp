@@ -43,7 +43,21 @@ string vigDecrypt(string ciphertext, string key){
 
 
 int main() {
-
+    string plaintext, key;
+    
+    cout << "Plaintext: ";
+    getline(cin, plaintext);
+    
+    cout << "Keyword: ";
+    cin >> key;
+    
+    string ciphertext = vigEncrypt(plaintext, key);
+    cout << "Ciphertext: " << ciphertext << endl;
+    
+    string decryptedText = vigDecrypt(ciphertext, key);
+    cout << "Decrypted Text: " << decryptedText << endl;
+    
+   
     //Possible limitations: How long can the plaintext be? Are spaces accounted for by ASCII value? No numbers (use isDigit() for conditional).
     return 0;
 }
