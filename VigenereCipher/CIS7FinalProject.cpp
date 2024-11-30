@@ -25,9 +25,6 @@ void vigEncrypt(string plaintext, string key){
 }
 //write decryption function (refer to Di = (Ei - Ki + 26) mod 26
 
-
-using namespace std;
-
 int main() {
 
     //Possible limitations: How long can the plaintext be? Are spaces accounted for by ASCII value? No numbers?
