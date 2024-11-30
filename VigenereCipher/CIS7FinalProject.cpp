@@ -16,7 +16,7 @@ string vigEncrypt(string plaintext, string key){
     char encChar;
 
     for (int i = 0 ; i < plaintext.size() ; i++) {
-        if (isspace(plaintext[i])) {
+        if (isalpha(plaintext[i])) {
             encryptedText.push_back(plaintext[i]);
             continue;
         }
@@ -39,7 +39,7 @@ string vigDecrypt(string ciphertext, string key){
     char decChar;
 
     for (int i = 0; i < ciphertext.size(); i++) {
-        if (isspace(ciphertext[i])) {
+        if (isalpha(ciphertext[i])) {
             decryptedText.push_back(ciphertext[i]);
             continue;
         }
