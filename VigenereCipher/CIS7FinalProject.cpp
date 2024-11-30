@@ -12,14 +12,19 @@ string vigEncrypt(string plaintext, string key){
     string encryptedText;
     int plainNum = 0;
     int keyNum   = 0;
+    int keyIndex = 0;
     char encChar;
 
     for (int i = 0 ; i < plaintext.size() ; i++) {
-        if (isspace(plaintext[i])) {encChar = ' '; break;}
+        if (isspace(plaintext[i])) {
+            encryptedText.push_back(plaintext[i]);
+            continue;
+        }
         plainNum = isupper(plaintext[i]) ? plaintext[i] - 'A' : plaintext[i] - 'a';                             //  i % key.size() is used to avoid out of bounds within the for-loop
-        keyNum = isupper(key[i % key.size()]) ? key[i % key.size()] - 'A' : key[i % key.size()] - 'a';          //  ternary operators to determine whether ASCII -> int conversion
+        keyNum = isupper(key[keyIndex % key.size()]) ? key[keyIndex % key.size()] - 'A' : key[keyIndex % key.size()] - 'a';          //  ternary operators to determine whether ASCII -> int conversion
         encChar = isupper(plaintext[i]) ? ((plainNum + keyNum) % 26) + 'A' : ((plainNum + keyNum) % 26) + 'a';  //  accommodates for upper or lower case.
         encryptedText.push_back(encChar);
+        keyIndex++;
     }
     return encryptedText;
 }
@@ -30,13 +35,19 @@ string vigDecrypt(string ciphertext, string key){
     string decryptedText;
     int ciphernum = 0;
     int keyNum = 0;
+    int keyIndex = 0;
     char decChar;
 
     for (int i = 0; i < ciphertext.size(); i++) {
+        if (isspace(ciphertext[i])) {
+            decryptedText.push_back(ciphertext[i]);
+            continue;
+        }
         ciphernum = isupper(ciphertext[i]) ? ciphertext[i] - 'A': ciphertext[i] - 'a';
-        keyNum = isupper(key[i % key.size()]) ? key[i % key.size()] - 'A': key[i % key.size()] - 'a';
+        keyNum = isupper(key[keyIndex % key.size()]) ? key[keyIndex % key.size()] - 'A': key[keyIndex % key.size()] - 'a';
         decChar = isupper(ciphertext[i]) ? ((ciphernum - keyNum + 26) % 26) + 'A': ((ciphernum - keyNum + 26) % 26) +'a';
         decryptedText.push_back(decChar);
+        keyIndex++;
     }
     return decryptedText;
 }
@@ -44,20 +55,19 @@ string vigDecrypt(string ciphertext, string key){
 
 int main() {
     string plaintext, key;
-    
+
     cout << "Plaintext: ";
     getline(cin, plaintext);
-    
+
     cout << "Keyword: ";
     cin >> key;
-    
+
     string ciphertext = vigEncrypt(plaintext, key);
     cout << "Ciphertext: " << ciphertext << endl;
-    
+
     string decryptedText = vigDecrypt(ciphertext, key);
     cout << "Decrypted Text: " << decryptedText << endl;
-    
-   
+
     //Possible limitations: How long can the plaintext be? Are spaces accounted for by ASCII value? No numbers (use isDigit() for conditional).
     return 0;
 }
