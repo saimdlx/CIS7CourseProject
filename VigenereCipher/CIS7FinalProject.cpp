@@ -27,7 +27,7 @@ void vigEncrypt(string plaintext, string key){
 
 int main() {
 
-    //Possible limitations: How long can the plaintext be? Are spaces accounted for by ASCII value? No numbers?
+    //Possible limitations: How long can the plaintext be? Are spaces accounted for by ASCII value? No numbers (use isDigit() for conditional).
     //request user input for PLAINTEXT and KEY
     //throw into vigEncrypt
     //display encrypted message
