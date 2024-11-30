@@ -21,7 +21,6 @@ void vigEncrypt(string plaintext, string key){
         encryptedText.push_back(encChar);
     }
     cout << encryptedText;
-
 }
 
 //write decryption function (refer to Di = (Ei - Ki + 26) mod 26
@@ -35,7 +34,7 @@ char decChar;
 for (int i = 0; i < ciphertext.size(); i++) {
    ciphernum = isupper(ciphertext[i]) ? ciphertext[i] - 'A': ciphertext[i] - 'a';
    keyNum = isupper(key[i % key.size()]) ? key[i % key.size()] - 'A': key[i % key.size()] - 'a'; 
-   decChar = isupper(ciphertext[i]) ? ((ciphernum - keyNum +26)% 26) + 'A': ((ciphernum - keyNum + 26)% 26) +'a';
+   decChar = isupper(ciphertext[i]) ? ((ciphernum - keyNum +26) % 26) + 'A': ((ciphernum - keyNum + 26) % 26) +'a';
    decryptedText.push_back(decChar);  
     }
     cout << decryptedText;
