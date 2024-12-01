@@ -4,7 +4,7 @@
 ### Source Control & Management 🚀: Saim Ahmed, Syed Moiz, Emma Wuysang
 
 # Program Information ℹ️: 
-
+![vignereexample](https://github.com/user-attachments/assets/bcdb44b1-af4b-4d53-8b8f-f952157dfe3f)
 - Simple and flexible implementation of the **Vignere Cipher** encryption using *C++* and *cryptography methods*.
 - Program is functional through IDE for C++ files and executables.
 
