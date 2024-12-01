@@ -52,22 +52,36 @@ string vigDecrypt(string ciphertext, string key){
     return decryptedText;
 }
 
+void vigMenu() {
+    cout << " __      ___                              _____ _ _                     \n"
+            " \\ \\    / (_)                            / ____(_) |                    \n"
+            "  \\ \\  / / _  __ _ _ __   ___ _ __ ___  | |     _| |__  _ __   ___ _ __ \n"
+            "   \\ \\/ / | |/ _` | '_ \\ / _ \\ '__/ _ \\ | |    | | '_ \\| '_ \\ / _ \\ '__|\n"
+            "    \\  /  | | (_| | | | |  __/ | |  __/ | |____| | | | | |_) |  __/ |   \n"
+            "     \\/   |_|\\__, |_| |_|\\___|_|  \\___|  \\_____|_|_| |_| .__/ \\___|_|   \n"
+            "              __/ |                                    | |              \n"
+            "             |___/                                     |_|              " << endl;
+}
+
 
 int main() {
     string plaintext, key;
 
-    cout << "Plaintext: ";
-    getline(cin, plaintext);
+    do {
+        vigMenu();
+        cout << "Enter PLAINTEXT or PRESS ENTER TO QUIT PROGRAM: ";
+        getline(cin, plaintext);
+        if (plaintext.empty()) {
+            break;
+        }
+        cout << "Enter ENCRYPTION KEYWORD: ";
+        getline(cin, key);
 
-    cout << "Keyword: ";
-    cin >> key;
+        string encryptedMessage = vigEncrypt(plaintext, key);
+        string decryptedMessage = vigDecrypt(encryptedMessage, key);
+        cout << "The given plaintext: " << plaintext << "encrypted with keyword: " << key << " yields: " << encryptedMessage << endl;
+        cout << "The decrypted ciphertext using keyword: " << key << " yields: " << decryptedMessage << endl;
+    } while (!plaintext.empty());                                                                                                   //performs actions AS LONG as plaintext isn't empty.
 
-    string ciphertext = vigEncrypt(plaintext, key);
-    cout << "Ciphertext: " << ciphertext << endl;
-
-    string decryptedText = vigDecrypt(ciphertext, key);
-    cout << "Decrypted Text: " << decryptedText << endl;
-
-    
     return 0;
 }
