@@ -1,4 +1,4 @@
-# CIS7CourseProject
-Course project for Discrete Structures
+# CIS7CourseProject: Vignere Cipher Encryption/Decryption Algorithm
+##**Project Pseudocode, Documentation, Implementation, and Source Control done by: Saim Ahmed, Syed Moiz, and Emma Wuysang**
 
-We decided on the Test Case 3, titled, Vigenere Cipher Decryption, that focuses on user input and retrieving a general text with a key to implement an encrypted message with the keyword, and decryption to the ciphered text. In this program, we worked with crytpography, modular arithmetic, loops, functions, string operations, ternary operators, etc. The authors of the program were Saim Ahmed, Syed Moiz, and Emma Wuysang. We published the work on November 30, a few days before the due date to complete the project ahead of time. The program should be utilized as expected within the Course Project requirements, however, it is recommended to enter in a few different testcases (one with spaces in the plaintext and one without). Otherwise the program should run through an IDE for C++.
+
