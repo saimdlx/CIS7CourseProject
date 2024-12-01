@@ -1,4 +1,29 @@
 # CIS7CourseProject: Vignere Cipher Encryption/Decryption Algorithm
-## **Project Pseudocode, Documentation, Implementation, and Source Control done by: Saim Ahmed, Syed Moiz, and Emma Wuysang**
+### Project Pseudocode & Documentation 📝: Emma Wuysang, Syed Moiz
+### Algorithm Development & Implementation 🖥:  Saim Ahmed, Syed Moiz
+### Source Control & Management 🚀: Saim Ahmed, Syed Moiz, Emma Wuysang
 
+# Program Information ℹ️: 
 
+- Simple and flexible implementation of the **Vignere Cipher** encryption using *C++* and *cryptography methods*.
+- Program is functional through IDE for C++ files and executables.
+
+# Under The Hood 🏎️: 
+
+- Program uses modular arithmetic cases to encrypt and decrypt plaintexts given cipherkeys.
+- Encryption is done via formula:
+```
+Ei = (Pi + Ki) mod 26
+```
+- Decryption is done via formula:
+```
+Di = (Ei - Ki + 26) mod 26
+```
+- Formulas implemented through code (seen in lines 10-52) are used to successfully encrypt string variables, convert their ASCII values to integer values, and perform encryption and decryption shuffling.
+
+# Limitations and special cases 🪲:
+- Initial limitations prohibited use of spaces and non-alphabetical values to be used within the program. This program was solved with the ```isAlpha()``` function, which preserved non-alphabetical values in both the encrypted and decrypted returns.
+- Existing anomalies could include the length of the plaintext, as well as the keyword. In this current iteration, the cipher key is limited to **ONE WORD**.
+
+# Program Documentation & Additional Information 🏭: 
+[REDIRECT TO PROJECT DOCUMENTATION.](https://docs.google.com/document/d/1d6rCgWUtcJm54AC5VaYR-TzVLbUF_ajs/edit?usp=sharing&ouid=111086274092931521736&rtpof=true&sd=true)
