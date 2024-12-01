@@ -1,6 +1,6 @@
 /*
  *  CIS-7 Final Project: Vigenere Cipher Decryption
- *  Saim Ahmed, Syed Moiz
+ *  Saim Ahmed, Syed Moiz, Emma Wuysang
  */
 
 #include <iostream>
