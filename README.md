@@ -26,4 +26,4 @@ Di = (Ei - Ki + 26) mod 26
 - Existing anomalies could include the length of the plaintext, as well as the keyword. In this current iteration, the cipher key is limited to **ONE WORD**.
 
 # Program Documentation & Additional Information 🏭: 
-[REDIRECT TO PROJECT DOCUMENTATION.](https://docs.google.com/document/d/1d6rCgWUtcJm54AC5VaYR-TzVLbUF_ajs/edit?usp=sharing&ouid=111086274092931521736&rtpof=true&sd=true)
+[REDIRECT TO PROJECT DOCUMENTATION.]([https://docs.google.com/document/d/1d6rCgWUtcJm54AC5VaYR-TzVLbUF_ajs/edit?usp=sharing&ouid=111086274092931521736&rtpof=true&sd=true](https://github.com/saimdlx/CIS7CourseProject/blob/50bfe0782bc9fbb7f64c85291c323016f424deb8/CIS7Course%20Project%20DOCUMENTATION.docx.pdf))
